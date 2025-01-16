@@ -422,7 +422,7 @@ app.post('/api/listings', auth, upload, async (req, res) => {
     title, price, city, location, country, propertyType, beds, baths, description,
     propertyReferenceId, building, neighborhood, developments, landlordName, reraTitleNumber,
     reraPreRegistrationNumber, agentName, agentCallNumber, agentEmail, agentWhatsapp,
-    extension, broker, phone, email, whatsapp, purpose, status, amenities,
+     broker, phone, email, whatsapp, purpose, status, amenities,
   } = req.body;
 
   try {
@@ -469,7 +469,7 @@ app.post('/api/listings', auth, upload, async (req, res) => {
       image: uploadedImages.length === 1 ? uploadedImages[0] : '',
       images: uploadedImages,
       pdf: pdfUrl,
-      extension,
+     
       broker,
       phone,
       email,

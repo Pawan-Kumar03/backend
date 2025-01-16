@@ -24,7 +24,6 @@ const ListingSchema = new mongoose.Schema({
   agentCallNumber: { type: String, default: '' },
   agentEmail: { type: String, default: '' },
   agentWhatsapp: { type: String, default: '' },
-  extension: { type: String, required: true },
   broker: { type: String, required: true },
   email: { type: String, required: true },
   phone: { type: String, required: true },
