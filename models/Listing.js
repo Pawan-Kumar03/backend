@@ -10,8 +10,8 @@ const ListingSchema = new mongoose.Schema({
   location: { type: String, required: true },
   country: { type: String, required: true }, // New field for country
   propertyType: { type: String, required: true },
-  beds: { type: Number, required: true },
-  baths: { type: Number, default: 0 },
+  beds: { type: String, required: true },
+  baths: { type: String, default: 0 },
   description: { type: String, default: '' },
   propertyReferenceId: { type: String, default: '' },
   building: { type: String, default: '' },
