@@ -88,6 +88,23 @@ app.post('/api/agent-profile', uploadAgentProfile, async (req, res) => {
   }
 });
 
+// Get Agent by Email
+app.get('/api/agents/:email', async (req, res) => {
+  try {
+    const agent = await Agent.findOne({ agentEmail: req.params.email });
+
+    if (!agent) {
+      return res.status(404).json({ message: 'Agent not found' });
+    }
+
+    res.status(200).json(agent);
+  } catch (error) {
+    console.error('Error fetching agent by email:', error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
+
+
 const uploadBrokerID = multer({ 
   storage: storage, 
   limits: { fileSize: 10 * 1024 * 1024 } 
